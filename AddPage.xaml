@@ -19,5 +19,12 @@
        TextChanged="OnStockEntryChange"
        Completed="OnStockEntryCompleted" />
 
+        <Button Margin="0,10,0,0"
+                x:Name="submit"
+                Text="Submit"
+                SemanticProperties.Hint="Add a new product"
+                Clicked="OnSubmitClick"
+                HorizontalOptions="Center" />
+
     </VerticalStackLayout>
 </ContentPage>
