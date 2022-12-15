@@ -11,7 +11,7 @@ public partial class MainPage : ContentPage
 
     public MainPage()
     {
-        for (int i = 0; i < 100; i++)
+        for (int i = 1; i <= 100; i++)
         {
             DB.Products.Add(new Product($"Product {i}", i));
         }
