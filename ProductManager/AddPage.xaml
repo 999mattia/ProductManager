@@ -8,5 +8,16 @@
             Text="Add a new product"
             VerticalOptions="Center" 
             HorizontalOptions="Center" />
+        
+        <Entry x:Name="nameEntry"
+       Placeholder="Enter name"
+       TextChanged="OnNameEntryChange"
+       Completed="OnNameEntryCompleted" />
+        
+        <Entry x:Name="stockEntry"
+       Placeholder="Enter stock"
+       TextChanged="OnStockEntryChange"
+       Completed="OnStockEntryCompleted" />
+
     </VerticalStackLayout>
 </ContentPage>

@@ -5,17 +5,13 @@ namespace ProductManager;
 
 public partial class MainPage : ContentPage
 {
-	ObservableCollection<Product> products = new();
+
+    ObservableCollection<Product> products = new();
 	ObservableCollection<Product> Products { get { return products; } }
 
 	public MainPage()
 	{
 		InitializeComponent();
-		products.Add(new Product("Test", 1));
-        products.Add(new Product("Test2", 2));
-        products.Add(new Product("Test3", 3));
-        products.Add(new Product("Test4", 4));
-        products.Add(new Product("Test5", 5));
         ProductsListView.ItemsSource= products;
 	}
 
