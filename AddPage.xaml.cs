@@ -11,6 +11,12 @@ public partial class AddPage : ContentPage
         product = new Product("", 0);
     }
 
+    private async void OnSubmitClick(object sender, EventArgs e)
+    {
+        MainPage.products.Add(product);
+        await Navigation.PushAsync(new DetailPage(product));
+    }
+
     private void OnNameEntryChange(object sender, TextChangedEventArgs e)
     {
         product.Name = e.NewTextValue;

@@ -6,16 +6,16 @@ namespace ProductManager;
 public partial class MainPage : ContentPage
 {
 
-    ObservableCollection<Product> products;
+    public static ObservableCollection<Product> products;
     ObservableCollection<Product> Products { get { return products; } }
 
     public MainPage()
     {
-        for (int i = 1; i <= 100; i++)
+        products = new ObservableCollection<Product>();
+        for (int i = 1; i <= 10; i++)
         {
-            DB.Products.Add(new Product($"Product {i}", i));
+            products.Add(new Product($"Product {i}", i));
         }
-        products = new ObservableCollection<Product>(DB.Products);
         InitializeComponent();
         ProductsListView.ItemsSource = products;
     }
