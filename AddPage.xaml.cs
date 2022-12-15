@@ -5,6 +5,7 @@ namespace ProductManager;
 public partial class AddPage : ContentPage
 {
     private Product product { get; set; }
+
     public AddPage()
     {
         InitializeComponent();
