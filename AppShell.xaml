@@ -6,8 +6,8 @@
     xmlns:local="clr-namespace:ProductManager"
     Shell.FlyoutBehavior="Disabled">
 <TabBar x:Name="tabs">
-            <Tab Title="Overview" Icon="/Resources/Images/dotnet_bot.svg"><ShellContent ContentTemplate="{DataTemplate local:MainPage}" Route="MainPage"/></Tab>
-            <Tab Title="Add product" Icon="/Resources/Images/dotnet_bot.svg"><ShellContent ContentTemplate="{DataTemplate local:AddPage}" Route="AddPage"/></Tab>
+            <Tab Title="Overview" Icon="/Resources/Images/overview.svg"><ShellContent ContentTemplate="{DataTemplate local:MainPage}" Route="MainPage"/></Tab>
+            <Tab Title="Add product" Icon="/Resources/Images/add.svg"><ShellContent ContentTemplate="{DataTemplate local:AddPage}" Route="AddPage"/></Tab>
         </TabBar>
     <ShellContent
         Title="Home"
