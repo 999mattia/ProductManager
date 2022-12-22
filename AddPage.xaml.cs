@@ -6,15 +6,18 @@ public partial class AddPage : ContentPage
 {
     private Product product { get; set; }
 
+    Product defaultProduct = new Product("", 0, 0, true, new DateTime(2021, 1, 1), "");
+
     public AddPage()
     {
         InitializeComponent();
-        product = new Product("", 0, 0, true, new DateTime(2021, 1, 1), "");
+        product = defaultProduct;
     }
 
     private async void OnSubmitClick(object sender, EventArgs e)
     {
         MainPage.products.Add(product);
+        product = defaultProduct;
         await Navigation.PushAsync(new DetailPage(product));
     }
 
@@ -52,6 +55,24 @@ public partial class AddPage : ContentPage
         catch (Exception)
         {
             Console.WriteLine("exception");
+        }
+    }
+
+    void OnPickerChange(object sender, EventArgs e)
+    {
+        var picker = (Picker)sender;
+
+        if (picker.SelectedIndex == 0)
+        {
+            product.Type = "Drohne";
+        }
+        if (picker.SelectedIndex == 1)
+        {
+            product.Type = "Modelleisenbahn";
+        }
+        if (picker.SelectedIndex == 2)
+        {
+            product.Type = "Sonstiges";
         }
     }
 

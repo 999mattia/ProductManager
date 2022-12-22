@@ -47,7 +47,8 @@
         <DatePicker />
 
         <Picker x:Name="picker"
-        Title="Select a product type">
+        Title="Select a product type"
+        SelectedIndexChanged="OnPickerChange" >
 
   <Picker.ItemsSource>
     <x:Array Type="{x:Type x:String}">
