@@ -7,24 +7,64 @@
         <Label 
             Text="Add a new product"
             VerticalOptions="Center" 
-            HorizontalOptions="Center" />
+            HorizontalOptions="Center"
+            FontAttributes="Bold"
+            FontSize="25" 
+             />
         
+
         <Entry x:Name="nameEntry"
        Placeholder="Enter name"
        TextChanged="OnNameEntryChange"
-       Completed="OnNameEntryCompleted" />
+       Completed="OnNameEntryCompleted"  />
         
         <Entry x:Name="stockEntry"
        Placeholder="Enter stock"
        TextChanged="OnStockEntryChange"
-       Completed="OnStockEntryCompleted" />
+       Completed="OnStockEntryCompleted"  />
+
+       <Label
+       x:Name="priceLabel"
+       Text="Price: 1"
+       HorizontalOptions="Center"
+       />
+
+        <Slider Maximum="500" Minimum="1"
+                ValueChanged="OnPriceSliderChange" />
+
+
+
+        <Label x:Name="inProductionLabel" HorizontalOptions="Center" Text="In Production: True"/>
+
+        <Switch IsToggled="true" HorizontalOptions="Center" Toggled="OnToggled"/>
+
+        <Label
+       x:Name="dateLabel"
+       Text="Release date:"
+       HorizontalOptions="Center"
+       />
+
+        <DatePicker />
+
+        <Picker x:Name="picker"
+        Title="Select a product type">
+
+  <Picker.ItemsSource>
+    <x:Array Type="{x:Type x:String}">
+      <x:String>Drohne</x:String>
+      <x:String>Modelleisenbahn</x:String>
+      <x:String>Sonstiges</x:String>
+    </x:Array>
+  </Picker.ItemsSource>
+</Picker>
 
         <Button Margin="0,10,0,0"
                 x:Name="submit"
                 Text="Submit"
                 SemanticProperties.Hint="Add a new product"
                 Clicked="OnSubmitClick"
-                HorizontalOptions="Center" />
+                HorizontalOptions="Center"  />
 
-    </VerticalStackLayout>
+
+   </VerticalStackLayout>
 </ContentPage>

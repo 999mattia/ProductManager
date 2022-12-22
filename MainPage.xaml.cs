@@ -12,9 +12,9 @@ public partial class MainPage : ContentPage
     public MainPage()
     {
         products = new ObservableCollection<Product>();
-        for (int i = 1; i <= 10; i++)
+        for (int i = 1; i <= 10000; i++)
         {
-            products.Add(new Product($"Product {i}", i));
+            products.Add(new Product($"Product {i}", i, i, true, new DateTime(2021, 1, 1), "Drohne"));
         }
         InitializeComponent();
         ProductsListView.ItemsSource = products;
@@ -24,10 +24,5 @@ public partial class MainPage : ContentPage
     {
         Product selectedProduct = args.SelectedItem as Product;
         await Navigation.PushAsync(new DetailPage(selectedProduct));
-    }
-
-    private async void OnAddClick(object sender, EventArgs e)
-    {
-        await Shell.Current.GoToAsync("/add");
     }
 }

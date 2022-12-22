@@ -9,7 +9,7 @@ public partial class AddPage : ContentPage
     public AddPage()
     {
         InitializeComponent();
-        product = new Product("", 0);
+        product = new Product("", 0, 0, true, new DateTime(2021, 1, 1), "");
     }
 
     private async void OnSubmitClick(object sender, EventArgs e)
@@ -23,10 +23,25 @@ public partial class AddPage : ContentPage
         product.Name = e.NewTextValue;
     }
 
+    private void OnPriceSliderChange(object sender, ValueChangedEventArgs e)
+    {
+        product.Price = (int)e.NewValue;
+        Label label = (Label)FindByName("priceLabel");
+        label.Text = $"Price: {product.Price.ToString()}";
+    }
+
+    void OnToggled(object sender, ToggledEventArgs e)
+    {
+        product.InProduction = e.Value;
+        Label label = (Label)FindByName("inProductionLabel");
+        label.Text = $"In Production: {product.InProduction.ToString()}";
+    }
+
     private void OnNameEntryCompleted(object sender, EventArgs e)
     {
         product.Name = ((Entry)sender).Text;
     }
+
     private void OnStockEntryChange(object sender, TextChangedEventArgs e)
     {
         try

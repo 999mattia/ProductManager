@@ -6,9 +6,40 @@
              Title="DetailPage">
     <VerticalStackLayout>
         <Label
-            x:Name="label"
-            Text="Details"
+            x:Name="nameLabel"
+            Text="Name: "
             VerticalOptions="Center" 
-            HorizontalOptions="Center" />
+            HorizontalOptions="Center" 
+             />
+            <Label
+            x:Name="stockLabel"
+            Text="Stock: "
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" 
+             />
+            <Label
+            x:Name="priceLabel"
+            Text="Price: "
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" 
+             />
+            <Label
+            x:Name="inProductionLabel"
+            Text="In production: "
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" 
+             />
+            <Label
+            x:Name="releaseDateLabel"
+            Text="Release date: "
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" 
+             />
+             <Label
+            x:Name="typeLabel"
+            Text="Type: "
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" 
+             />
     </VerticalStackLayout>
 </ContentPage>

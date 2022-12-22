@@ -7,6 +7,6 @@
         <Label 
             Text="Edit a product"
             VerticalOptions="Center" 
-            HorizontalOptions="Center" />
+            HorizontalOptions="Center"  />
     </VerticalStackLayout>
 </ContentPage>
