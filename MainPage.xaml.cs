@@ -12,7 +12,7 @@ public partial class MainPage : ContentPage
     public MainPage()
     {
         products = new ObservableCollection<Product>();
-        for (int i = 1; i <= 10000; i++)
+        for (int i = 1; i <= 10; i++)
         {
             products.Add(new Product($"Product {i}", i, i, true, new DateTime(2021, 1, 1), "Drohne"));
         }
