@@ -14,11 +14,58 @@ public partial class AddPage : ContentPage
         product = defaultProduct;
     }
 
+
+
+    private bool CheckInput()
+    {
+        List<string> errorMessages = new List<string>();
+
+        if (product.Name.Count() < 3)
+        {
+            errorMessages.Add("Name has to be at least 3 characters long");
+        }
+
+        if (product.Stock == 0)
+        {
+            errorMessages.Add("Stock has to be set and greater than 0");
+        }
+
+        if (product.Type == "")
+        {
+            errorMessages.Add("Type has to be selected");
+        }
+
+
+
+        if (errorMessages.Count > 0)
+        {
+            string errors = "";
+
+            foreach (string error in errorMessages)
+            {
+                errors += error + "\n";
+
+            }
+            DisplayAlert("Alert", $"{errors}", "OK");
+
+            return false;
+        }
+        else
+        {
+            return true;
+        }
+    }
+
+
     private async void OnSubmitClick(object sender, EventArgs e)
     {
-        MainPage.products.Add(product);
-        product = defaultProduct;
-        await Navigation.PushAsync(new DetailPage(product));
+        if (CheckInput() == true)
+        {
+            MainPage.products.Add(product);
+            product = defaultProduct;
+            await Navigation.PushAsync(new DetailPage(product));
+
+        }
     }
 
     private void OnNameEntryChange(object sender, TextChangedEventArgs e)
