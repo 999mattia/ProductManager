@@ -8,6 +8,7 @@
 <TabBar x:Name="tabs">
             <Tab Title="Overview" Icon="/Resources/Images/overview.svg"><ShellContent ContentTemplate="{DataTemplate local:MainPage}" Route="MainPage"/></Tab>
             <Tab Title="Add product" Icon="/Resources/Images/add.svg"><ShellContent ContentTemplate="{DataTemplate local:AddPage}" Route="AddPage"/></Tab>
+            <Tab Title="Help" Icon="/Resources/Images/help.svg"><ShellContent ContentTemplate="{DataTemplate local:HelpPage}" Route="HelpPage"/></Tab>
         </TabBar>
     <ShellContent
         Title="Home"

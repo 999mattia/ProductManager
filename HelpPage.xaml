@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ProductManager.HelpPage"
+             Title="HelpPage">
+    <VerticalStackLayout>
+        <Label 
+            Text="Help and information"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center"
+            FontAttributes="Bold"
+            FontSize="25" 
+             />
+        <Label 
+            Text="This project is made for educational purposes only."
+            VerticalOptions="Center" 
+            HorizontalOptions="Center"
+             />
+<Label 
+            Text="If you have problems with the controls of the app or if you have any other questions/problems, please contact me at: mattia.gisiger@gmail.com"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center"
+             />
+   </VerticalStackLayout>
+</ContentPage>
