@@ -41,5 +41,11 @@
             VerticalOptions="Center" 
             HorizontalOptions="Center" 
              />
+    <Button 
+                x:Name="delete"
+                Text="Delete"
+                SemanticProperties.Hint="Delete product"
+                Clicked="OnDeleteClick"
+                HorizontalOptions="Center"  />
     </VerticalStackLayout>
 </ContentPage>

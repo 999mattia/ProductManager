@@ -13,12 +13,10 @@
              />
         <Label 
             Text="This project is made for educational purposes only."
-            VerticalOptions="Center" 
             HorizontalOptions="Center"
              />
 <Label 
             Text="If you have problems with the controls of the app or if you have any other questions/problems, please contact me at: mattia.gisiger@gmail.com"
-            VerticalOptions="Center" 
             HorizontalOptions="Center"
              />
    </VerticalStackLayout>

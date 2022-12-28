@@ -15,4 +15,14 @@ public partial class DetailPage : ContentPage
         releaseDateLabel.Text += product.ReleaseDate.ToString("d");
         typeLabel.Text += product.Type;
     }
+
+    private async void OnDeleteClick(object sender, EventArgs e)
+    {
+        bool answer = await DisplayAlert("Alert", "Are you sure you want to delete this product?", "Yes", "No");
+        if (answer)
+        {
+            MainPage.products.Remove(MainPage.products.Where(p => p.Name == header.Title).First());
+            await Navigation.PopAsync();
+        }
+    }
 }

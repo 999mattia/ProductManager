@@ -66,7 +66,7 @@ public partial class AddPage : ContentPage
             await Navigation.PushAsync(new DetailPage(product));
 
         }
-    }
+    } 
 
     private void OnNameEntryChange(object sender, TextChangedEventArgs e)
     {
