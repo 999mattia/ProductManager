@@ -4,9 +4,11 @@ namespace ProductManager;
 
 public partial class DetailPage : ContentPage
 {
+    private Product product { get; set; }
     public DetailPage(Product product)
     {
         InitializeComponent();
+        this.product = product;
         header.Title = product.Name;
         nameLabel.Text += product.Name;
         stockLabel.Text += product.Stock;
@@ -24,5 +26,10 @@ public partial class DetailPage : ContentPage
             MainPage.products.Remove(MainPage.products.Where(p => p.Name == header.Title).First());
             await Navigation.PopAsync();
         }
+    }
+
+    private async void OnEditClick(object sender, EventArgs e)
+    {
+        await Navigation.PushAsync(new EditPage(product));
     }
 }

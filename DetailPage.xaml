@@ -42,6 +42,12 @@
             HorizontalOptions="Center" 
              />
     <Button 
+                x:Name="edit"
+                Text="Edit"
+                SemanticProperties.Hint="Edit product"
+                Clicked="OnEditClick"
+                HorizontalOptions="Center"  />
+    <Button 
                 x:Name="delete"
                 Text="Delete"
                 SemanticProperties.Hint="Delete product"
